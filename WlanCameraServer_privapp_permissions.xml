@@ -1,0 +1,24 @@
+<!-- This XML file declares which signature|privileged permissions, android. and android.car to grant to
+privileged apps that come with the platform -->
+<permissions>
+    <privapp-permissions package="skoda.app.wlancameraserver">
+        <!-- ======================== Android ============================================= -->
+        <permission name="android.permission.ACCESS_NETWORK_STATE" />
+        <permission name="android.permission.POST_NOTIFICATIONS" />
+		<permission name="android.permission.ACCESS_WIFI_STATE" />
+		<permission name="android.permission.ACCESS_FINE_LOCATION" />
+		<permission name="android.permission.NEARBY_WIFI_DEVICES" />
+		<permission name="android.permission.NETWORK_SETTINGS" />
+        <!-- ======================== Automotive ========================================== -->
+        <permission name="android.car.permission.CAR_IDENTIFICATION" />
+        <permission name="android.car.permission.CAR_INFO" />
+        <!-- ======================== Magic =============================================== -->
+        <permission name="technology.cariad.magic.service.permission.ALL" />
+        <!-- ======================== E.Solutions / CARIAD ================================ -->
+        <permission name="com.volkswagenag.esm.ONLINEMANUALS_RW" />
+        <permission name="com.volkswagenag.privacymode.settings.READ_ACCESS" />
+        <!-- ======================== RSI Permissions ===================================== -->
+        <permission name="de.esolutions.fw.android.rsi.gateway.BIND_RSI_ADMIN" />
+        <permission name="de.esolutions.fw.rsi.permission.CONSUME_ONLINEUPDATEUI" />
+    </privapp-permissions>
+</permissions>

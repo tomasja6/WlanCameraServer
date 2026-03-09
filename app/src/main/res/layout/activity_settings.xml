@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Single camera only -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Allow only one camera"
+                android:textColor="#CCCCCC"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchSingleCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <!-- Auto-accept trusted -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auto-accept trusted camera"
+                android:textColor="#CCCCCC"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchAutoAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <!-- Video fit mode -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Video fill mode (fill/fit)"
+                android:textColor="#CCCCCC"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchVideoFill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <!-- Debug overlay -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Debug overlay (fps/bitrate)"
+                android:textColor="#CCCCCC"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDebugOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+        </LinearLayout>
+
+        <!-- WS Port -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WebSocket Port"
+            android:textColor="#AAAAAA"
+            android:textSize="13sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etWsPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="8888"
+            android:textColor="#FFFFFF"
+            android:background="#222222"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- UDP Port -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UDP Beacon Port"
+            android:textColor="#AAAAAA"
+            android:textSize="13sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUdpPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="39500"
+            android:textColor="#FFFFFF"
+            android:background="#222222"
+            android:padding="10dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSaveSettings"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Save"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/btnBackSettings"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:backgroundTint="#607D8B" />
+
+        </LinearLayout>
+
+        <!-- Wi-Fi přihlašovací údaje -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poslední použité Wi-Fi údaje"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- ── Zdroj Wi-Fi / hotspot ── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zdroj Wi-Fi přihlašovacích údajů"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Číst ze systémového hotspotu\n(doporučeno pro infotainment)"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchSystemHotspot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <!-- Manuální SSID/PSK – zobrazí se jen pokud je switchSystemHotspot = OFF -->
+        <LinearLayout
+            android:id="@+id/layoutManualCredentials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#1A1A2E"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manuální SSID (vlastní LocalOnlyHotspot)"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:layout_marginBottom="2dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etManualSsid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SSID (prázdné = systém vygeneruje)"
+                android:inputType="text"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#666666"
+                android:background="#222222"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manuální heslo"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:layout_marginBottom="2dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etManualPsk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Heslo (prázdné = systém vygeneruje)"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#666666"
+                android:background="#222222"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSavedSsid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SSID: (nenastaveno)"
+            android:textColor="#CCCCCC"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvSavedPsk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heslo: (nenastaveno)"
+            android:textColor="#CCCCCC"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnResetHotspot"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Reset Wi-Fi údajů (vygenerovat nové)"
+            android:backgroundTint="#F44336"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>
